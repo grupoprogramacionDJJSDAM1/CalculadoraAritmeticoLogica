@@ -134,12 +134,15 @@ public class Calculadora {
 					}
 					break;
 				case 5:
+					pintarMenuPrincipal();
+					break;
+				case 6:
 					System.out.println("Has elegido salir del programa ");
 					System.out.println("Se ha salido del programa correctamente");
 					salirBucle = true; // salirBucle a true para que salga del bucle
 					break;
 				 default:
-	                   System.out.println("Solo números entre 1 y 5");
+	                   System.out.println("Solo números entre 1 y 6");
 			}
 			break;
 		case 2:
