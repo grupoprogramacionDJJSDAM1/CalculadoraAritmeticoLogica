@@ -1,7 +1,7 @@
 
 /* Enunciado: Calculadora de operaciones modularizada.
  * Fecha: 10/11/21
- * Autor: Jaime Fernando Martín Gil.
+ * Autores: Jaime, Saul, David, Jorge.
  * Comentarios: -Metodo menu() no devuelve nada ni tiene parametros. 
  * -Metodo pintarOpcionesMenu() no devuelve nada ni tiene parametros. 
  *-Metodo suma(), resta(), multiplicacion() y division() con dos variables por parametro (numero1 y numero2) 
