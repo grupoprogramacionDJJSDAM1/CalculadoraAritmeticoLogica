@@ -1,7 +1,7 @@
 
 /* Enunciado: Calculadora de operaciones modularizada.
  * Fecha: 10/11/21
- * Autores: Jaime, Saul, David, Jorge.
+ * Autor: Jaime Fernando Martín Gil, Jorge Parra López, David Mateos Lorenzo y Saul Fernández García.
  * Comentarios: -Metodo menuPrincipal() no devuelve nada ni tiene parametros. 
  * -Metodo pintarOpcionesMenu() no devuelve nada ni tiene parametros. 
  *-Metodo suma(), resta(), multiplicacion() y division() con dos variables por parametro (numero1 y numero2) 
@@ -20,7 +20,7 @@ public class Calculadora {
 	private static boolean valorlogico1; //valor logico1 (true o false) con el que quiere operar el usuario
 	private static boolean valorlogico2;//valor logico2 (true o false) con el que quiere operar el usuario
 	static Scanner teclado = new Scanner(System.in);
-
+	private static boolean salirBucle=false;
 	public static void main(String[] args) {
 		menuPrincipal();
 	}
@@ -96,7 +96,7 @@ public class Calculadora {
 	//MENÚ PRINCIPAL
 	
 	public static void menuPrincipal() {
-		boolean salirBucle=false;
+		
 	do {
 		try {
 		pintarMenuPrincipal();
@@ -114,6 +114,7 @@ public class Calculadora {
 		case 3: 
 			System.out.println("Has elegido salir");
 			salirBucle=true;
+			teclado.next(); //Para que no me vuelva a mostrar el menu (error con scanner)
 			break;
 			default: System.out.println("numeros del 1 al 3!!");
 		}
@@ -192,6 +193,8 @@ public class Calculadora {
 			System.out.println("Has elegido salir del programa ");
 			System.out.println("Se ha salido del programa correctamente");
 			salirBucle1 = true; // salirBucle a true para que salga del bucle
+			salirBucle=true;
+			teclado.next();
 			break;
 		default:
             System.out.println("Solo números entre 1 y 6");
@@ -251,7 +254,8 @@ public class Calculadora {
 				System.out.println("Has elegido salir del programa ");
 				System.out.println("Se ha salido del programa correctamente");
 				salirBucle2 = true; // salirBucle a true para que salga del bucle
-				menuPrincipal();
+				salirBucle=true; //Salgo del bucle del menu principal
+				teclado.next(); //para que no haga un bucle infinito o no vuelva a repetir el menú
 				break;
 			default:
                 System.out.println("Solo números entre 1 y 6");
